@@ -2,3 +2,33 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.button-volver {
+    height: 50px;
+    background-color: #BCDEFB;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-size: 28px;
+    color: #000000;
+  }
+
+  .button-guardar {
+    height: 50px;
+    background-color: #0C47A1;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+
+  .button-guardar:hover {
+    background-color: #64B5F6;
+  }

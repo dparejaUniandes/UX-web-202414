@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CucuMainPageComponent {
   isPopupVisible = false;
+  message = "Ha cerrado sesión satisfactoriamente"
 
   showPopup() {
 	  this.isPopupVisible = true;
