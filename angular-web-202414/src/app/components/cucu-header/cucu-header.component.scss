@@ -1,0 +1,20 @@
+.custom-tooltip-test {
+    --bs-tooltip-bg: var(--bd-violet-bg) !important;
+    --bs-tooltip-color: var(--bs-white);
+    background-color: red;
+  }
+
+.exit-session {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(238, 104, 70);
+    background: linear-gradient(#FF8981 44px, #ADAAAA);
+    margin: auto;
+}
+
+.border-menu {
+    width: 50%;
+    height: 80px;
+    border: 1px solid #C3C6CF;
+    background: linear-gradient(#BCDEFB 70px, #ADAAAA);
+  }
