@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './cucu-main-page.component.scss'
 })
 export class CucuMainPageComponent {
+  isPopupVisible = false;
 
+  showPopup() {
+	  this.isPopupVisible = true;
+  }
+
+  hidePopup() {
+	  this.isPopupVisible = false;
+  }
 }

@@ -1,2 +1,7 @@
 <br>
-<app-cucu-header></app-cucu-header>
+<app-cucu-header (openModalCloseSession)="showPopup()"></app-cucu-header>
+<br>
+<mat-divider></mat-divider>
+<br>
+<app-body-main-page></app-body-main-page>
+<app-modal-information *ngIf="isPopupVisible" (closeEvent)="hidePopup()"></app-modal-information>

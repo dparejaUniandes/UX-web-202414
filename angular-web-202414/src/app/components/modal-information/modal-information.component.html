@@ -1,0 +1,6 @@
+<div class="popup-overlay mt-4" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <p class="text-style-modal-info">Ha cerrado sesión satisfactoriamente</p>
+      <a class="text-style-aceptar btn rounded-5" (click)="closePopup()">Aceptar</a>
+    </div>
+  </div>

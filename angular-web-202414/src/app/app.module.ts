@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CucuHeaderComponent } from './components/cucu-header/cucu-header.component';
 import { CucuMainPageComponent } from './cucu-main-page/cucu-main-page.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { BodyMainPageComponent } from './components/body-main-page/body-main-page.component';
+import { ModalInformationComponent } from './components/modal-information/modal-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CucuHeaderComponent,
-    CucuMainPageComponent
+    CucuMainPageComponent,
+    BodyMainPageComponent,
+    ModalInformationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDividerModule
   ],
   providers: [
     provideClientHydration(),
