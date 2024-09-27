@@ -2,3 +2,72 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.button-volver {
+    height: 50px;
+    background-color: #BCDEFB;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-size: 28px;
+    color: #000000;
+  }
+
+  .button-guardar {
+    height: 50px;
+    background-color: #0C47A1;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    font-size: 28px;
+    color: #FFFFFF;
+  }
+
+  .button-guardar:hover {
+    background-color: #64B5F6;
+  }
+
+  .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+    border-color: #43474E !important;
+    background-color: #39608F !important;
+} 
+
+html .mat-accent {
+  --mat-slider-ripple-color: #191C20 !important;
+  --mat-slider-hover-state-layer-color: rgba(128, 115, 119, 0.05) !important;
+  --mat-slider-focus-state-layer-color: rgba(123, 117, 119, 0.2) !important;
+  --mdc-slider-handle-color: #191C20 !important;
+  --mdc-slider-focus-handle-color: #191C20 !important;
+  --mdc-slider-hover-handle-color: #191C20 !important;
+  --mdc-slider-active-track-color: #191C20 !important;
+  --mdc-slider-inactive-track-color: #191C20 !important;
+  --mdc-slider-with-tick-marks-inactive-container-color: #191C20 !important;
+  --mdc-slider-with-tick-marks-active-container-color: white !important;
+}
+
+.mat-accent {
+  --mat-full-pseudo-checkbox-selected-icon-color: #5d585a !important;
+  --mat-full-pseudo-checkbox-selected-checkmark-color: #fafafa !important;
+  --mat-full-pseudo-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54) !important;
+  --mat-full-pseudo-checkbox-disabled-selected-checkmark-color: #fafafa !important;
+  --mat-full-pseudo-checkbox-disabled-unselected-icon-color: #b0b0b0 !important;
+  --mat-full-pseudo-checkbox-disabled-selected-icon-color: #b0b0b0 !important;
+  --mat-minimal-pseudo-checkbox-selected-checkmark-color: #5f585a !important;
+  --mat-minimal-pseudo-checkbox-disabled-selected-checkmark-color: #b0b0b0 !important;
+}
+
+.mat-mdc-checkbox-ripple, .mdc-checkbox__ripple {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}

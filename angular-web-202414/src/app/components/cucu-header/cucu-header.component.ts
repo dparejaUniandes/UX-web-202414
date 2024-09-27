@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var bootstrap: any;
 
@@ -8,6 +9,9 @@ declare var bootstrap: any;
   styleUrl: './cucu-header.component.scss'
 })
 export class CucuHeaderComponent implements OnInit {
+
+  constructor(private router: Router) { }
+
   ngOnInit(): void {
       if (typeof document !== 'undefined') {
         // Bootstrap tooltip initialization
@@ -19,8 +23,14 @@ export class CucuHeaderComponent implements OnInit {
   }
 
   @Output() openModalCloseSession = new EventEmitter<void>();
+  @Output() openModalCloseSessionQR = new EventEmitter<void>();
 
   openPopup() {
 	  this.openModalCloseSession.emit();
   }
+
+  openPopupQR() {
+	  this.openModalCloseSessionQR.emit();
+  }
+
 }

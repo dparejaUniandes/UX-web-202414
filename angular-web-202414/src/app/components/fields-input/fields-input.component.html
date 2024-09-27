@@ -1,0 +1,74 @@
+
+
+<form 
+    [formGroup]="fieldsForm"
+    >
+    <div class="form-group mx-sm-3 mb-2 ">
+        <label for="name" class = "text-style">Nombre </label>
+        <input
+        novalidate
+        id="name"
+        class="form-control"
+        [(ngModel)]="name"
+        formControlName="name"
+        placeholder="Nombre"
+        />
+        <div
+        class="text-danger"
+        *ngIf="
+            fieldsForm.get('name')?.hasError('required') &&
+            fieldsForm.get('name')!.touched
+        "
+        
+        >
+        El nombre es requerido
+        </div>
+    </div>
+
+
+    <div class="form-group mx-sm-3 mt-5">
+        <label for="email" class = "text-style">Correo electrónico</label>
+        <input
+        novalidate
+        id="email"
+        class="form-control"
+        [(ngModel)]="email"
+        formControlName="email"
+        placeholder="CorreoElectrónico"
+        />
+        <div
+        class="text-danger"
+        *ngIf="
+            fieldsForm.get('email')?.hasError('required') &&
+            fieldsForm.get('email')!.touched
+        "
+        
+        >
+        El correo electrónico es requerido
+        </div>
+        
+    </div>
+
+    <div class="form-group mx-sm-3 mt-5" *ngIf="!passwordFieldIsHidden">
+        <label for="password" class = "text-style">Contraseña </label>
+        <input
+        novalidate
+        id="password"
+        class="form-control"
+        [(ngModel)]="password"
+        formControlName="password"
+        placeholder="Contraseña"
+        />
+        <div
+        class="text-danger"
+        *ngIf="
+            fieldsForm.get('password')?.hasError('required') &&
+            fieldsForm.get('password')!.touched
+        "
+        
+        >
+        La contraseña es requerida
+        </div>
+    </div>
+    
+    </form>
