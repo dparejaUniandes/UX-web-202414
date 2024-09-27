@@ -1,0 +1,84 @@
+<div class="main-container container-fluid h-100">
+
+  <div class="row h-100">
+        <div class="container-brand col-12 col-md-6 text-white d-flex align-items-center justify-content-center">
+          <div>
+            <div class="container-logo">
+              <div class="container-img-logo">
+                <img class="img-logo" src="assets/images/clock.png" alt="">
+              </div>
+              <p class="text-logo">Cucu</p>
+            </div>
+            <div class="container-slogan">
+              <p class="text-slogan">Te ayuda a programar alarmas de manera detallada y amigable</p>
+            </div>
+          </div>
+        </div>
+          <!-- <img class="split left img-login" [src]="'assets/img/banner_home_akt.jpg'" /> -->
+      
+
+        <div class="col container-login">
+            <!-- <div class="container-title">
+                <h5 class="title">
+                    <span class="title">Iniciar Sesión</span>
+                </h5>
+                <p>Ingrese su usuario</p>
+            </div>
+            <div>
+                <a href="/"><img class="img-fluid" [src]="'assets/img/login.png'" width="700" /></a>
+            </div> -->
+            <div class="">
+                <div class="centered">
+                  <div class="container-card">
+                      <form #formGroup [formGroup]="loginForm">
+                          <div class="input-group mb-3">
+                              <input type="text" class="form-control input-login shadow-none" placeholder="Correo electrónico"
+                                formControlName="user"
+                                [ngClass]="{ 'invalid-input': validateForm('user') }">
+                              <div *ngIf="validateForm('user')"
+                              [ngClass]="{ 'invalid-input-label': validateForm('user') }">
+                                            El correo es requerido.
+                              </div>
+                              <div *ngIf="validateEmail('user')"
+                              [ngClass]="{ 'invalid-input-label': validateEmail('user')  }">
+                                        Por favor ingrese un email valido.
+                            </div>
+                          </div>
+                          <br>
+                          <div class="input-group mb-3">
+                              <input [type]="show ? 'text' : 'password'" class="form-control input-login shadow-none" placeholder="Contraseña"
+                              formControlName="password"
+                              [ngClass]="{ 'invalid-input': validateForm('password') }">
+                              <div *ngIf="validateForm('password')"
+                              [ngClass]="{ 'invalid-input-label': validateForm('password') }">
+                                            La contraseña es requerida.
+                            </div>
+                            <div *ngIf="validateLength('password')"
+                              [ngClass]="{ 'invalid-input-label': validateLength('password')  }">
+                                        La longitud mínima de la contraseña debe ser de 8 carateres.
+                            </div>
+                            
+                            <div *ngIf="errorStatus!=-1" class="error-message invalid-input-label">
+                              {{ errorMessage }}
+                            </div>
+                          </div>
+                      </form>
+                      <div class="container-btn-action">
+                          <button type="button" class="btn btn-primary" (click)="redirectPage('')"
+                            >Iniciar Sesión</button>
+                      </div>
+                      <div class="input-group mb-3 container-btn-password">
+                        <button type="button" class="btn btn-link button-password"
+                          (click)="redirectPage('recover-password')">¿Olvido su contraseña?</button>
+                    </div>
+                    <hr/>
+                    <div class="container-btn-action">
+                      <button type="button" class="btn btn-primary btn-register" (click)="redirectPage('')">
+                        Registrarse</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>

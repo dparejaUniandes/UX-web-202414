@@ -11,6 +11,8 @@ import { CucuMainPageComponent } from './cucu-main-page/cucu-main-page.component
 import {MatDividerModule} from '@angular/material/divider';
 import { BodyMainPageComponent } from './components/body-main-page/body-main-page.component';
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
+import { LoginComponent } from './login/login.component';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 import { CucuChangePasswordComponent } from './cucu-change-password/cucu-change-password.component';
 import { FieldsInputComponent } from './components/fields-input/fields-input.component';
 import { UpdateInformationComponent } from './update-information/update-information.component';
@@ -25,6 +27,8 @@ import { ModalQrComponent } from './components/modal-qr/modal-qr.component';
     CucuMainPageComponent,
     BodyMainPageComponent,
     ModalInformationComponent,
+    LoginComponent,
+    RecoverPasswordComponent,
     CucuChangePasswordComponent,
     FieldsInputComponent,
     UpdateInformationComponent,
@@ -35,8 +39,8 @@ import { ModalQrComponent } from './components/modal-qr/modal-qr.component';
     BrowserModule,
     AppRoutingModule,
     MatDividerModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
     MatCheckboxModule,
   ],
   providers: [

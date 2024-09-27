@@ -1,0 +1,55 @@
+<div class="container-flex pt-5">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 margin-check">
+            <app-fields-input 
+                [passwordFieldIsHidden]="false"
+                >
+            </app-fields-input>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4 margin-check">
+            <p class="text-style">¿Desea contarnos más sobre las actividades que ocupa las alarmas?</p>
+            <mat-checkbox >
+                <span class="text-style-check">Despertador</span>
+            </mat-checkbox>
+            <br>
+            <mat-checkbox>
+                <span class="text-style-check">Recordatorio</span>
+            </mat-checkbox>
+            <br>
+            <mat-checkbox>
+                <span class="text-style-check">Agenda diaria</span>
+            </mat-checkbox>
+            <br>
+            <mat-checkbox>
+                <span class="text-style-check">Tomar medicamento</span>
+            </mat-checkbox>
+            <br>
+            <mat-checkbox>
+                <span class="text-style-check">Actividades laborales o de estudio</span>
+            </mat-checkbox>
+        </div>
+    </div>
+
+    <div class="row margin-buttons">
+        <div class="col-md-2 col-2"></div>
+        <div class="col-md-3 col-3 ">
+            <button type="submit" class="button-volver p-1 w-100"  (click)="onCancel()">Volver</button>
+        </div>
+        <div class="col-md-2 col-2"></div>
+        <div class="col-md-3 col-3">
+            <button type="button" class="button-guardar ms-1 p-1 w-100" (click)="storeInfo() " >Guardar</button>
+        </div>
+    </div>
+</div>
+
+<app-modal-information 
+    [message]="message" 
+    *ngIf="isPopupVisible" 
+    (closeEvent)="hidePopup()"
+    [imageInterrogationIsPresent]="true"
+    [showTwoButtons]="true"
+    [buttonNameOne]="'No'"
+    [buttonNameTwo]="'Si'"
+    (noOptionEvent)="noOptionRegistry()">
