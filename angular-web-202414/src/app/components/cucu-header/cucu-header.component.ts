@@ -23,9 +23,14 @@ export class CucuHeaderComponent implements OnInit {
   }
 
   @Output() openModalCloseSession = new EventEmitter<void>();
+  @Output() openModalCloseSessionQR = new EventEmitter<void>();
 
   openPopup() {
 	  this.openModalCloseSession.emit();
+  }
+
+  openPopupQR() {
+	  this.openModalCloseSessionQR.emit();
   }
 
 }

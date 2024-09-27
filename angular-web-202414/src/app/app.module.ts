@@ -12,6 +12,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import { BodyMainPageComponent } from './components/body-main-page/body-main-page.component';
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
 import { CucuChangePasswordComponent } from './cucu-change-password/cucu-change-password.component';
+import { FieldsInputComponent } from './components/fields-input/fields-input.component';
+import { UpdateInformationComponent } from './update-information/update-information.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { RegistryComponent } from './registry/registry.component';
+import { ModalQrComponent } from './components/modal-qr/modal-qr.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,11 @@ import { CucuChangePasswordComponent } from './cucu-change-password/cucu-change-
     CucuMainPageComponent,
     BodyMainPageComponent,
     ModalInformationComponent,
-    CucuChangePasswordComponent
+    CucuChangePasswordComponent,
+    FieldsInputComponent,
+    UpdateInformationComponent,
+    RegistryComponent,
+    ModalQrComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +37,7 @@ import { CucuChangePasswordComponent } from './cucu-change-password/cucu-change-
     MatDividerModule,
     FormsModule,
     ReactiveFormsModule,
+    MatCheckboxModule,
   ],
   providers: [
     provideClientHydration(),

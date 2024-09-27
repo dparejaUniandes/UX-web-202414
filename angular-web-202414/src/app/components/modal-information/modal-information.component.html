@@ -1,6 +1,10 @@
 <div class="popup-overlay mt-4" (click)="closePopup()">
     <div class="popup-content" (click)="$event.stopPropagation()">
-      <p class="text-style-modal-info">{{message}}</p>
-      <a class="text-style-aceptar btn rounded-5" (click)="closePopup()">Aceptar</a>
+      <p class="text-style-modal-info" [ngStyle]="{'margin-bottom': (imageInterrogationIsPresent) ? '0%' : '30%'}">{{message}}</p>
+      <p class="link-secondary" [routerLink]="['/']" title="Página principal" *ngIf="imageInterrogationIsPresent">
+        <img src="assets/images/interrogacion.png" alt="interrogation icon" />
+      </p>
+      <a class="text-style-aceptar btn rounded-5 pe-5" *ngIf="showTwoButtons"  (click)="noOption()">{{buttonNameOne}}</a>
+      <a class="text-style-aceptar btn rounded-5" (click)="closePopup()">{{buttonNameTwo}}</a>
     </div>
   </div>

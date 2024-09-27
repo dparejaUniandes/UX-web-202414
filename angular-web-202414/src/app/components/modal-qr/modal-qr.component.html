@@ -1,0 +1,9 @@
+<div class="popup-overlay mt-4" (click)="closePopup()">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+      <p class="text-style-modal-info">Escanea el código QR desde tu celular</p>
+      <p class="link-secondary" title="Página principal">
+        <img src="assets/images/qrBig.png" alt="qr image" />
+      </p>
+      <a class="text-style-aceptar btn rounded-5" (click)="closePopup()">Aceptar</a>
+    </div>
+  </div>

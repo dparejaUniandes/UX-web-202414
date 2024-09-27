@@ -11,6 +11,7 @@ export class CucuChangePasswordComponent {
   public passwordForm!: FormGroup;
   isPopupVisible = false;
   message = "Ha actualizado la contraseña exitosamente"
+  imageInterrogationIsPresent = false
 
   constructor(private router: Router, 
     private formBuilder: FormBuilder,) { }

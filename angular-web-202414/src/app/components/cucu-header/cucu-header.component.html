@@ -1,7 +1,7 @@
 <div class="containe">
     <div class="row">
         <div class="col-1">
-            <span class="link-secondary ps-5" [routerLink]="['/']" title="Página principal">
+            <span class="link-secondary ps-5"  title="Página principal">
                 <img src="assets/images/reloj-icono.png" alt="reloj-icono" />
             </span>
         </div>
@@ -9,7 +9,8 @@
         </div>
         <div class="d-flex align-content-stretch col-md-2 col-1 pt-7 pb-5 pb-5 pe-0 ">
             
-            <a  class="border-menu w-100 d-flex align-items-center btn  px-4 rounded-start-4 rounded-end-0 border-0 ps-1"
+            <a  routerLink="/update-information"
+            class="border-menu w-100 d-flex align-items-center btn  px-4 rounded-start-4 rounded-end-0 border-0 ps-1"
             title="Actualizar perfil"
             >
             <span class="text-style"> Actualizar perfil </span>
@@ -28,6 +29,8 @@
             data-bs-toggle="tooltip" data-bs-placement="top"
             data-bs-custom-class="custom-tooltip-test" 
             data-bs-title="Seleccionar opción que le permite generar código QR para iniciar sesión" 
+            (click)="openPopupQR()"
+            
             >
                 <svg xmlns="http://www.w3.org/2000/svg" height="50" fill="currentColor" class="w-100 bi bi-qr-code" viewBox="0 0 16 16">
                     <path d="M2 2h2v2H2z"/>
