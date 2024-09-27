@@ -9,6 +9,8 @@ import { CucuMainPageComponent } from './cucu-main-page/cucu-main-page.component
 import {MatDividerModule} from '@angular/material/divider';
 import { BodyMainPageComponent } from './components/body-main-page/body-main-page.component';
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { ModalInformationComponent } from './components/modal-information/modal-
     CucuHeaderComponent,
     CucuMainPageComponent,
     BodyMainPageComponent,
-    ModalInformationComponent
+    ModalInformationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDividerModule
+    MatDividerModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),
