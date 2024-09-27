@@ -11,6 +11,7 @@ import { BodyMainPageComponent } from './components/body-main-page/body-main-pag
 import { ModalInformationComponent } from './components/modal-information/modal-information.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RecoverPasswordComponent } from './recover-password/recover-password.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CucuMainPageComponent,
     BodyMainPageComponent,
     ModalInformationComponent,
+    LoginComponent,
+    RecoverPasswordComponent
   ],
   imports: [
     BrowserModule,
