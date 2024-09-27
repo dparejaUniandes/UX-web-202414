@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cucu-main-page',
@@ -10,6 +11,8 @@ export class CucuMainPageComponent {
   isPopupVisibleQR = false;
   message = "Ha cerrado sesión satisfactoriamente"
 
+  constructor(private router: Router) { }
+
   showPopup() {
 	  this.isPopupVisible = true;
   }
@@ -20,6 +23,7 @@ export class CucuMainPageComponent {
 
   hidePopup() {
 	  this.isPopupVisible = false;
+    this.router.navigate(['/login']);
   }
 
   hidePopupQR() {

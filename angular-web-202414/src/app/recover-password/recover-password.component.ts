@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recover-password',
@@ -20,8 +21,12 @@ export class RecoverPasswordComponent {
 
     errorIcon: string;
 
+    isPopupVisible: boolean = false;
+
+    message: string = "Revisa tu correo electrónico para recuperar tu cuenta";
+
     constructor(
-      private fb: FormBuilder) {
+      private fb: FormBuilder, private router: Router) {
       this.showSpinner = false;
 
       this.loginForm = this.fb.group({});
@@ -95,5 +100,14 @@ export class RecoverPasswordComponent {
      */
     redirectPage(page: string): void{
       window.location.href = "";
+    }
+
+    confirmation() {
+      this.isPopupVisible = true;
+    }
+
+    hidePopup() {
+      this.isPopupVisible = false;
+      this.router.navigate(['/login']);
     }
 }

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'update-information', component: UpdateInformationComponent },
   { path: 'change-password', component: CucuChangePasswordComponent },
   { path: 'registry', component: RegistryComponent },
-  { path: '', component: CucuMainPageComponent },
+  { path: '', component: LoginComponent },
   { path: '**', component: CucuMainPageComponent }
 ];
 

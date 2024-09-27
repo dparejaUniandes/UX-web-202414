@@ -13,7 +13,7 @@ export class RegistryComponent {
   constructor(private router: Router) { }
 
   onCancel() {
-    this.router.navigate(['/main-page']);
+    this.router.navigate(['/login']);
   }
 
   public storeInfo(): void{
@@ -22,7 +22,7 @@ export class RegistryComponent {
 
   hidePopup() {
 	  this.isPopupVisible = false;
-    this.router.navigate(['/main-page']);
+    this.router.navigate(['/login']);
   }
 
   noOptionRegistry() {
